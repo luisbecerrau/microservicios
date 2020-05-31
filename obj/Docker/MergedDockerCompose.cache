@@ -1,0 +1,49 @@
+services:
+  lil.customers:
+    build:
+      context: D:\app\Microservices\proyectos
+      dockerfile: Lil.Customers\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: lilcustomers
+    ports:
+    - published: 9000
+      target: 80
+    - target: 80
+  lil.products:
+    build:
+      context: D:\app\Microservices\proyectos
+      dockerfile: Lil.Products/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: lilproducts
+    ports:
+    - published: 9100
+      target: 80
+    - target: 80
+  lil.sales:
+    build:
+      context: D:\app\Microservices\proyectos
+      dockerfile: Lil.Sales/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: lilsales
+    ports:
+    - published: 9200
+      target: 80
+    - target: 80
+  lil.search:
+    build:
+      context: D:\app\Microservices\proyectos
+      dockerfile: Lil.Search/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      Services__Customers: http://lil.customers
+      Services__Products: http://lil.products
+      Services__Sales: http://lil.sales
+    image: lilsearch
+    ports:
+    - published: 9300
+      target: 80
+    - target: 80
+version: '3.4'

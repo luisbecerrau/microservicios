@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2sHd9Pl+Ccrq3QkTgM0s32u8v8EtRvQThthOCy9eDZsXZOeOrQ3juTuKIeFXkbeu3Po+oH1frDqGNeNsd/1Cqw==",
+  "success": true,
+  "projectFilePath": "D:\\app\\Microservices\\proyectos3\\Lil.Search\\Lil.Search.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\luisb\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512",
+    "C:\\Users\\luisb\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
